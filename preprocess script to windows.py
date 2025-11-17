@@ -20,8 +20,7 @@ SESSION_ROOTS = [
 ]
 
 TRAIN_SUB = range(1, 35)
-VAL_SUB   = range(35, 39)
-TEST_SUB  = range(39, 43)
+TEST_SUB  = range(35, 43)
 
 CHUNK_SIZE = 5000  # windows per saved chunk
 
@@ -86,5 +85,4 @@ def collect_and_save_chunks(subjects, label_map, prefix="train"):
 
 if __name__ == "__main__":
     collect_and_save_chunks(TRAIN_SUB, GESTURE_MAP, prefix="train")
-    collect_and_save_chunks(VAL_SUB,   GESTURE_MAP, prefix="val")
     collect_and_save_chunks(TEST_SUB,  GESTURE_MAP, prefix="test")
